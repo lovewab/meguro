@@ -1,0 +1,29 @@
+{% for item in logs %}
+{% set url = linkify(item.url) %}
+<div class="item" itemscope itemtype="http://schema.org/BlogPosting">
+  <h2 itemprop="headline"><a href="{{ url }}">{{ item.title }}</a></h2>
+  <div class="item_tags tags">
+    {% for tag in item.tags %}
+      <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if tag.meta.color %} style="--color:{{tag.meta.color}}"{% endif %}>{{ tag.title }}</a>
+    {% endfor %}
+  </div>
+  <div class="item_summary" itemprop="articleBody">
+    {{ item.summary }}...
+    <a href="{{ url }}"></a>
+  </div>
+  <div class="item_authors">
+    {% for author in item.collaborators %}
+      {% if author.avatar %}
+        <span class="tip" aria-label="{{ author.name }}">
+          <img src="{{ author.avatar }}">
+        </span>
+      {% else %}
+        <span class="tip" aria-label="{{ author.name }}">{{ author.name|first }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <a class="item_time" href="{{ url }}">
+    <time datetime="{{ item.published_at|xmldatetime }}" itemprop="datePublished">{{ item.published_at.strftime("%Y-%m-%d") }}</time>
+  </a>
+</div>
+{% endfor %}

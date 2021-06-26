@@ -1,0 +1,64 @@
+.tags a {
+  --color: rgb(var(--rgb-primary));
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 1em;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 28px;
+  background-color: var(--color);
+  color: white;
+  margin-right: 1em;
+	text-decoration: none;
+}
+.tags .new {
+  --color: #3778FF;
+}
+.tags .update {
+  --color: #E016C4;
+}
+.tags .fix,
+.tags .bugfix {
+  --color: #FF4772;
+}
+
+.tip {
+  position: relative;
+}
+.tip:before {
+  display: none;
+  position: absolute;
+  bottom: auto;
+  right: 50%;
+  top: -7px;
+  margin-right: -5px;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 10000;
+}
+.tip:after {
+  display: none;
+  position: absolute;
+  margin-bottom: 5px;
+  bottom: 100%;
+  right: 50%;
+  padding: 0 10px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  content: attr(aria-label);
+  white-space: pre;
+  z-index: 10000;
+  line-height: 26px;
+  transform: translateX(50%);
+}
+.tip:hover:before,
+.tip:hover:after {
+  display: inline-block;
+}

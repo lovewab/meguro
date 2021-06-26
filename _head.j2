@@ -1,0 +1,13 @@
+<div class="head">
+  <div class="inner">
+    <div class="site">
+      {% if site.logo %}
+      <a class="site_logo" href="/"><img src="{{ site.logo.src|thumbnail('m') }}"></a>
+      {% endif %}
+      <div class="site_info">
+        <h1><a href="/">{{ site.name }}</a></h1>
+        {% if site.summary %}<p>{{ site.summary }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>

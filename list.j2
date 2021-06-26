@@ -1,0 +1,18 @@
+{% from "macros.j2" import render_navigation with context %}
+
+{% block style %}
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ static_url }}src/index.css">
+{% endblock %}
+
+{% block body %}
+  {% include "gh:typlog/meguro/_head.j2" %}
+  <div class="main">
+    <div class="inner">
+      <h2 class="main_title"><span>{{ page.title }}</span></h2>
+      {% set logs = page.items %}
+      {% include "gh:typlog/meguro/_logs.j2" %}
+      {{ render_navigation(page) }}
+    </div>
+  </div>
+{% endblock %}
