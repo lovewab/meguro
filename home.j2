@@ -1,17 +1,52 @@
+{% from "macros.j2" import render_subject_content %}
+
 {% block style %}
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ static_url }}src/index.css">
 {% endblock %}
 
+{% set items = query.latest_subjects('post', contains=['collaborators', 'tags', 'content']) %}
+{% if items %}
+  {% set page = items[0] %}
+{% else %}
+  {% set page = None %}
+{% endif %}
+
 {% block body %}
   {% include "gh:typlog/meguro/_head.j2" %}
   <div class="main">
     <div class="inner">
-      {% set logs = query.latest_subjects('post', contains=['collaborators', 'tags', 'content']) %}
+      {% if page %}
+      <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
+        <h1 class="p-name" itemprop="headline"><a href="{{ linkify(page.url) }}">{{ page.title }}</a></h1>
+        {% if page.subtitle %}
+          <h2 class="p-summary">{{ page.subtitle }}</h2>
+        {% endif %}
+        <div class="tags">
+          {% for tag in page.tags %}
+            <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if tag.meta.color %} style="--color:{{tag.meta.color}}"{% endif %}>{{ tag.title }}</a>
+          {% endfor %}
+        </div>
+        <div class="e-content js-content yue" itemprop="articleBody">
+          {{ render_subject_content(site, page) }}
+        </div>
+        <a class="published" href="{{ linkify(page.url) }}">
+          <time datetime="{{ page.published_at|xmldatetime }}" itemprop="datePublished">{{ page.published_at.strftime("%Y-%m-%d") }}</time>
+        </a>
+      </article>
+      {% endif %}
+
+      {% set logs = items[1:] %}
       {% include "gh:typlog/meguro/_logs.j2" %}
       <div class="home-more">
         <a href="{{ linkify('/archive/') }}">MORE →</a>
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block script %}
+{% if page %}
+<script>typlog.content({{ page.images|tojson }})</script>
+{% endif %}
 {% endblock %}

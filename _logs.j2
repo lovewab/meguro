@@ -11,7 +11,7 @@
     {{ item.summary }}...
     <a href="{{ url }}"></a>
   </div>
-  <div class="item_authors">
+  <div class="item_authors authors">
     {% for author in item.collaborators %}
       {% if author.avatar %}
         <span class="tip" aria-label="{{ author.name }}">
@@ -22,7 +22,7 @@
       {% endif %}
     {% endfor %}
   </div>
-  <a class="item_time" href="{{ url }}">
+  <a class="item_time published" href="{{ url }}">
     <time datetime="{{ item.published_at|xmldatetime }}" itemprop="datePublished">{{ item.published_at.strftime("%Y-%m-%d") }}</time>
   </a>
 </div>

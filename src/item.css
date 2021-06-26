@@ -53,30 +53,10 @@
   border-radius: 100%;
   vertical-align: middle;
 }
-.item_time {
-  display: block;
-  position: absolute;
-  top: 35px;
-  right: 560px;
-  text-align: right;
-  width: 100vw;
-  color: rgba(0, 0, 0, .52);
-  font-weight: 500;
-}
-a.item_time:hover {
-  text-decoration: underline;
-  color: rgba(0, 0, 0, .52);
-}
-
 @media (max-width: 680px) {
   .item_time,
   .item_authors {
     display: inline-block;
     vertical-align: middle;
-  }
-  .item_time {
-    position: static;
-    width: auto;
-    font-weight: 400;
   }
 }

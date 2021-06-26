@@ -10,7 +10,7 @@
 <div class="main">
   <div class="inner">
     <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
-      <h1 class="p-name" itemprop="headline">{{ page.title }}</h1>
+      <h1 class="p-name" itemprop="headline"><a href="{{ linkify(page.url) }}">{{ page.title }}</a></h1>
       {% if page.subtitle %}
         <h2 class="p-summary">{{ page.subtitle }}</h2>
       {% endif %}
@@ -22,6 +22,9 @@
       <div class="e-content js-content yue" itemprop="articleBody">
         {{ render_subject_content(site, page) }}
       </div>
+      <a class="published" href="{{ linkify(page.url) }}">
+        <time datetime="{{ page.published_at|xmldatetime }}" itemprop="datePublished">{{ page.published_at.strftime("%Y-%m-%d") }}</time>
+      </a>
     </article>
   </div>
 </div>
