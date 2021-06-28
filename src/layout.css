@@ -1,5 +1,5 @@
 :root {
-  --en-sans: "Roboto", "Helvetica Neue", "Helvetica", Aria;
+  --en-sans: "Helvetica Neue", "Helvetica", Aria;
   --sys-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue";
   --cjk-sans: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 }
@@ -19,7 +19,7 @@ a:hover {
 }
 
 .inner {
-  max-width: 560px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 1em;
   box-sizing: border-box;
@@ -54,6 +54,7 @@ a:hover {
 
 .main {
   padding: 4em 0 2em;
+  font-family: "Source Sans Pro", var(--en-sans), var(--cjk-sans), sans-serif;
 }
 .main_title {
   font-size: 38px;

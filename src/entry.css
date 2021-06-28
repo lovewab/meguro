@@ -21,3 +21,8 @@ h2.p-summary {
 .h-entry .tags {
   margin-top: 1em;
 }
+
+.e-content {
+  line-height: 1.64;
+  margin-top: 2em;
+}
