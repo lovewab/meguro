@@ -4,7 +4,8 @@
   <h2 itemprop="headline"><a href="{{ url }}">{{ item.title }}</a></h2>
   <div class="item_tags tags">
     {% for tag in item.tags %}
-      <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if tag.meta.color %} style="--color:{{tag.meta.color}}"{% endif %}>{{ tag.title }}</a>
+      {% set color = tag.metadata.color %}
+      <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
     {% endfor %}
   </div>
   <div class="item_summary" itemprop="articleBody">

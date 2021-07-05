@@ -39,9 +39,11 @@ a:hover {
 }
 .site_logo {
   margin-right: 10px;
+  flex-shrink: 0;
 }
 .site_logo img {
   height: 48px;
+  border-radius: 50%;
 }
 .site_info h1 {
   margin: 0;
