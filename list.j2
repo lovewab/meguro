@@ -1,8 +1,10 @@
 {% from "macros.j2" import render_navigation with context %}
 
 {% block style %}
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ static_url }}src/index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ static_url }}meguro.css">
 {% endblock %}
 
 {% block body %}

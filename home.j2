@@ -3,8 +3,8 @@
 {% block style %}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ static_url }}src/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ static_url }}meguro.css">
 {% endblock %}
 
 {% set items = query.latest_subjects('post', contains=['collaborators', 'tags', 'content']) %}
