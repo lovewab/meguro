@@ -8,7 +8,9 @@
 {% endblock %}
 
 {% block body %}
-  {% include "gh:typlog/meguro/_head.j2" %}
+  {% if not features.head_html %}
+    {% include "gh:typlog/meguro/_head.j2" %}
+  {% endif %}
   <div class="main">
     <div class="inner">
       <h2 class="main_title"><span>{{ page.title }}</span></h2>
