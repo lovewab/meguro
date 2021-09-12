@@ -5,7 +5,7 @@
   <div class="item_tags tags">
     {% for tag in item.tags %}
       {% set color = tag.metadata.color %}
-      <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
+      <a class="{{ tag.slug }}" href="{{ linkify(tag.url) }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
     {% endfor %}
   </div>
   <div class="item_summary" itemprop="articleBody">
