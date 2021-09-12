@@ -16,7 +16,7 @@
 
 {% block body %}
   {% if not features.head_html %}
-    {% include "gh:typlog/meguro/_head.j2" %}
+    {% include "./_head.j2" %}
   {% endif %}
   <div class="main">
     <div class="inner">
@@ -42,7 +42,7 @@
       {% endif %}
 
       {% set logs = items[1:] %}
-      {% include "gh:typlog/meguro/_logs.j2" %}
+      {% include "./_logs.j2" %}
       <div class="home-more">
         <a href="{{ linkify('/archive/') }}">MORE →</a>
       </div>

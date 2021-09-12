@@ -9,13 +9,13 @@
 
 {% block body %}
   {% if not features.head_html %}
-    {% include "gh:typlog/meguro/_head.j2" %}
+    {% include "./_head.j2" %}
   {% endif %}
   <div class="main">
     <div class="inner">
       <h2 class="main_title"><span>{{ page.title }}</span></h2>
       {% set logs = page.items %}
-      {% include "gh:typlog/meguro/_logs.j2" %}
+      {% include "./_logs.j2" %}
       {{ render_navigation(site, page) }}
     </div>
   </div>
