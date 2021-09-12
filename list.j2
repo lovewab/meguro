@@ -1,4 +1,4 @@
-{% from "macros.j2" import render_navigation with context %}
+{% from "macros.j2" import render_navigation %}
 
 {% block style %}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
       <h2 class="main_title"><span>{{ page.title }}</span></h2>
       {% set logs = page.items %}
       {% include "gh:typlog/meguro/_logs.j2" %}
-      {{ render_navigation(page) }}
+      {{ render_navigation(site, page) }}
     </div>
   </div>
 {% endblock %}
