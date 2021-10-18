@@ -21,7 +21,7 @@
       <div class="tags">
         {% for tag in page.tags %}
           {% set color = tag.metadata.color %}
-          <a class="{{ tag.slug }}" href="{{ tag.url }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
+          <a class="{{ tag.slug }}" href="{{ linkify(tag.url) }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
         {% endfor %}
       </div>
       <div class="e-content js-content yue" itemprop="articleBody">
