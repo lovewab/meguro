@@ -13,7 +13,7 @@
     <a href="{{ url }}"></a>
   </div>
   <div class="item_authors authors">
-    {% for author in item.collaborators %}
+    {% for author in item.authors %}
       {% if author.avatar %}
         <span class="tip" aria-label="{{ author.name }}">
           <img src="{{ author.avatar }}">

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ static_url }}meguro.css">
 {% endblock %}
 
-{% set items = query.latest_subjects('post', contains=['collaborators', 'tags', 'content']) %}
+{% set items = query.latest_subjects('post', contains=['authors', 'tags', 'content']) %}
 {% if items %}
   {% set page = items[0] %}
 {% else %}
