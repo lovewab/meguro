@@ -14,7 +14,7 @@
 }
 .item h2 > a:after {
   content: "→";
-  color: rgb(var(--rgb-primary));
+  color: rgb(var(--primary-color-rgb));
   opacity: 0;
   transition: all 0.2s ease;
 }
@@ -41,7 +41,7 @@
   height: 28px;
   border-radius: 100%;
   vertical-align: middle;
-  background-color: rgba(var(--rgb-primary), 0.1);
+  background-color: rgba(var(--primary-color-rgb), 0.1);
   line-height: 28px;
   text-align: center;
   font-weight: 900;
