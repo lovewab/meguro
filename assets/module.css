@@ -1,5 +1,5 @@
 .tags a {
-  --color: rgb(var(--primary-color-rgb));
+  --color: rgb(var(--mg-rc-accent));
   display: inline-block;
   box-sizing: border-box;
   padding: 0 1em;
@@ -25,26 +25,24 @@
 }
 
 .published {
-  display: block;
-  position: absolute;
-  top: 35px;
-  right: 680px;
-  text-align: right;
-  width: 100vw;
-  color: rgba(0, 0, 0, .52);
-  font-weight: 500;
   text-decoration: none;
-}
-a.published:hover {
-  text-decoration: underline;
-  color: rgba(0, 0, 0, .52);
+  color: var(--mg-c-text-light);
+  font-weight: 500;
 }
 
-@media (max-width: 680px) {
+a.published:hover {
+  text-decoration: underline;
+  color: var(--mg-c-text-strong);
+}
+
+@media (min-width: 920px) {
   .published {
-    position: static;
-    width: auto;
-    font-weight: 400;
+    display: block;
+    position: absolute;
+    top: 35px;
+    right: 680px;
+    text-align: right;
+    width: 100vw;
   }
 }
 
@@ -62,7 +60,7 @@ a.published:hover {
   height: 0;
   content: '';
   border: 5px solid transparent;
-  border-top-color: rgba(0, 0, 0, 0.9);
+  border-top-color: rgba(var(--mg-rc-invert), 0.9);
   pointer-events: none;
   z-index: 10000;
 }
@@ -74,8 +72,8 @@ a.published:hover {
   right: 50%;
   padding: 0 10px;
   border-radius: 3px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
+  background-color: rgba(var(--mg-rc-invert), 0.9);
+  color: rgb(var(--mg-rc-base));
   font-size: 11px;
   font-weight: 500;
   content: attr(aria-label);

@@ -4,7 +4,7 @@
 }
 .h-entry + .item,
 .item + .item {
-  border-top: 1px solid #efefef;
+  border-top: 1px solid var(--mg-c-divider);
 }
 .item a {
   text-decoration: none;
@@ -14,7 +14,7 @@
 }
 .item h2 > a:after {
   content: "→";
-  color: rgb(var(--primary-color-rgb));
+  color: rgb(var(--mg-rc-accent));
   opacity: 0;
   transition: all 0.2s ease;
 }
@@ -41,11 +41,11 @@
   height: 28px;
   border-radius: 100%;
   vertical-align: middle;
-  background-color: rgba(var(--primary-color-rgb), 0.1);
+  background-color: rgba(var(--mg-rc-accent), 0.1);
   line-height: 28px;
   text-align: center;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.86);
+  color: var(--mg-c-text);
 }
 .item_authors img {
   display: inline-block;

@@ -1,0 +1,75 @@
+:root {
+  --mg-rc-base: 255, 255, 255;
+  --mg-rc-invert: 0, 0, 0;
+
+  --mg-c-bg: #fff;
+  --mg-c-bg-weak: #f9f9f9;
+  --mg-c-bg-mute: #f1f1f1;
+
+  --mg-f-sys-sans: -apple-system, "Segoe UI", Oxygen, Ubnztu, "Droid Sans", "Helvetica Neue";
+  --mg-f-sys-serif: Georgia, Palatino, "Times New Roman", Times;
+  --mg-f-cjk: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
+  --mg-f-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+  --mg-f-base: var(--mg-f-sys-sans), var(--mg-f-cjk), sans-serif;
+  --mg-f-text: "Source Sans Pro", var(--mg-f-base);
+  --mg-f-heading: var(--mg-f-base);
+
+  /* usually used for links */
+  --mg-rc-accent: var(--t-rc-primary);
+
+  --mg-s-head-offset: 0px;  /* there may be a banner above head */
+  --mg-s-head-height: 55px;
+  --mg-c-head-bg: var(--mg-c-bg);
+  --mg-c-head-text: var(--mg-c-text);
+  --mg-c-foot-bg: #000;
+  --mg-c-foot-text: #fff;
+
+  --mg-c-codespan: rgb(255, 248, 197);
+}
+
+.dark-theme {
+  --mg-rc-base: 0, 0, 0;
+  --mg-rc-invert: 255, 255, 255;
+
+  --mg-c-bg: #2a2b2d;
+  --mg-c-bg-weak: #3a3a3a;
+  --mg-c-bg-mute: #444;
+
+  /* usually used for links */
+  --mg-rc-accent: var(--t-rc-secondary);
+  --mg-c-codespan: rgb(255, 248, 197, 0.15);
+}
+
+:root {
+  --mg-c-text: rgba(var(--mg-rc-invert), 0.82);
+  --mg-c-text-light: rgba(var(--mg-rc-invert), 0.58);
+  --mg-c-text-strong: rgba(var(--mg-rc-invert), 0.94);
+  --mg-c-text-mute: rgba(var(--mg-rc-invert), 0.2);
+  --mg-c-divider: rgba(var(--mg-rc-invert), 0.08);
+  --mg-c-divider-light: rgba(var(--mg-rc-invert), 0.04);
+  --mg-c-accent: rgb(var(--mg-rc-accent));
+  /* set comment colors */
+  --tc-c-primary: var(--mg-c-accent);
+  --tc-c-link: var(--mg-c-accent);
+}
+
+.yue {
+  --yue-f-base: var(--mg-f-base);
+  --yue-f-quote: var(--mg-f-base);
+  --yue-f-heading: var(--mg-f-heading);
+  --yue-f-mono: var(--mg-f-mono);
+  --yue-c-strong: var(--mg-c-text-strong);
+  --yue-c-light: var(--mg-c-text-light);
+  --yue-c-accent: var(--mg-c-accent);
+  --yue-c-tr: rgba(var(--mg-rc-invert), 0.6);
+
+  --yue-c-bc: var(--mg-c-text);
+  --yue-c-bc-bg: rgba(0, 0, 0, 0.03);
+  --yue-c-bc-gutter: #f0f0f0;
+}
+
+.dark-theme .yue {
+  --yue-c-bc-bg: rgba(0, 0, 0, 0.5);
+  --yue-c-bc-gutter: rgba(0, 0, 0, 0.4);
+}

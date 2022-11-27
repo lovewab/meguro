@@ -8,14 +8,12 @@
 {% endblock %}
 
 {% block body %}
-  {% if not features.head_html %}
-    {% include "./_head.j2" %}
-  {% endif %}
+  {% include "./_partials/head.j2" %}
   <div class="main">
     <div class="inner">
       <h2 class="main_title"><span>{{ page.title }}</span></h2>
       {% set logs = page.items %}
-      {% include "./_logs.j2" %}
+      {% include "./_partials/logs.j2" %}
       {{ render_navigation(site, page) }}
     </div>
   </div>

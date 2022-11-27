@@ -4,6 +4,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://s3.typlog.com/npm/@typlog/yue@1.0.0/yue.css">
   <link rel="stylesheet" href="{{ static_url }}meguro.css">
 {% endblock %}
 
@@ -15,9 +16,7 @@
 {% endif %}
 
 {% block body %}
-  {% if not features.head_html %}
-    {% include "./_head.j2" %}
-  {% endif %}
+  {% include "./_partials/head.j2" %}
   <div class="main">
     <div class="inner">
       {% if page %}
@@ -42,16 +41,13 @@
       {% endif %}
 
       {% set logs = items[1:] %}
-      {% include "./_logs.j2" %}
-      <div class="home-more">
-        <a href="{{ linkify('/archive/') }}">MORE →</a>
-      </div>
+      {% include "./_partials/logs.j2" %}
+      {% if items|count == 10 %}
+        {% set last = items|last %}
+        <div class="home-more">
+          <a href="{{ linkify(site.list_url) }}{{last.published_at.year}}/#item-{{last.id}}">ARCHIVE →</a>
+        </div>
+      {% endif %}
     </div>
   </div>
-{% endblock %}
-
-{% block script %}
-{% if page %}
-<script>typlog.content({{ page.images|tojson }})</script>
-{% endif %}
 {% endblock %}

@@ -4,13 +4,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://s3.typlog.com/npm/@typlog/yue@1.0.0/yue.css">
   <link rel="stylesheet" href="{{ static_url }}meguro.css">
 {% endblock %}
 
 {% block body %}
-{% if not features.head_html %}
-  {% include "./_head.j2" %}
-{% endif %}
+{% include "./_partials/head.j2" %}
 <div class="main">
   <div class="inner">
     <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
