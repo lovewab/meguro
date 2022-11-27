@@ -63,6 +63,21 @@ a {
   margin: 2em 0;
 }
 
+.powered-by {
+  font-size: 14px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--mg-c-divider-light);
+}
+.powered-by > div {
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+.powered-by,
+.powered-by a {
+  color: var(--mg-c-text-mute);
+}
+
 .h-entry {
   position: relative;
   padding-top: 30px;
