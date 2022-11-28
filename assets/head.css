@@ -82,8 +82,6 @@ ul.links ul {
 }
 
 .head_actions button {
-  justify-content: center;
-  width: 40px;
   color: var(--mg-c-text-light);
 }
 .head_actions button:hover {
