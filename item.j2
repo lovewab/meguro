@@ -30,6 +30,11 @@
         <time datetime="{{ page.published_at|xmldatetime }}" itemprop="datePublished">{{ page.published_at.strftime("%Y-%m-%d") }}</time>
       </a>
     </article>
+    {% if features.comment and page.comment != 'disabled' %}
+      <section class="entry-section comment">
+        <div id="comment_thread"></div>
+      </section>
+    {% endif %}
   </div>
 </div>
 {% include "./_partials/foot.j2" %}
