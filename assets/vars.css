@@ -17,6 +17,7 @@
 
   /* usually used for links */
   --mg-rc-accent: var(--t-rc-primary);
+  --mg-rc-accent-text: var(--t-on-primary);
 
   --mg-s-head-offset: 0px;  /* there may be a banner above head */
   --mg-s-head-height: 55px;
@@ -38,6 +39,7 @@
 
   /* usually used for links */
   --mg-rc-accent: var(--t-rc-secondary);
+  --mg-rc-accent-text: var(--t-on-secondary);
   --mg-c-codespan: rgb(255, 248, 197, 0.15);
 }
 

@@ -7,21 +7,24 @@
   line-height: 28px;
   border-radius: 28px;
   background-color: var(--color);
-  color: white;
-	text-decoration: none;
+  color: rgb(var(--mg-rc-accent-text));
+  text-decoration: none;
 }
 .tags a + a {
   margin-left: 0.2em;
 }
 .tags .new {
   --color: #3778FF;
+  color: white;
 }
 .tags .update {
   --color: #E016C4;
+  color: white;
 }
 .tags .fix,
 .tags .bugfix {
   --color: #FF4772;
+  color: white;
 }
 
 .published {
