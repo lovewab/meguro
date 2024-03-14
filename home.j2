@@ -31,9 +31,9 @@
             <a class="{{ tag.slug }}" href="{{ linkify(tag.url) }}"{% if color %} style="--color:{{ color }}"{% endif %}>{{ tag.title }}</a>
           {% endfor %}
         </div>
-        <div class="e-content js-content yue" itemprop="articleBody">
+{#         <div class="e-content js-content yue" itemprop="articleBody">
           {{ render_subject_content(site, page) }}
-        </div>
+        </div> #}
         <a class="published" href="{{ linkify(page.url) }}">
           <time datetime="{{ page.published_at|xmldatetime }}" itemprop="datePublished">{{ page.published_at.strftime("%Y-%m-%d") }}</time>
         </a>
